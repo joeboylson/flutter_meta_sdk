@@ -105,7 +105,7 @@ class FlutterMetaSdkMethods {
         let arguments = call.arguments as? [String: Any] ?? [String: Any]()
         let amount = arguments["amount"] as! Double
         let currency = arguments["currency"] as! String
-        let parameters = arguments["parameters"] as? [AppEvents.ParameterName: Any] ?? [AppEvents.ParameterName: Any]()
+        let parameters = arguments["parameters"] as? [String: Any] ?? [String: Any]()
         AppEvents.shared.logPurchase(amount: amount, currency: currency, parameters: parameters)
 
         result(nil)
